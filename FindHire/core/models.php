@@ -363,7 +363,7 @@ function showNotificationByID($pdo, $user_id)
     }
 }
 
-function truncateText($text, $maxLength = 50)
+function truncateText($text, $maxLength = 65)
 { // To shorten text for notifications
     if (strlen($text) > $maxLength) {
         return substr($text, 0, $maxLength) . '...';
@@ -381,16 +381,17 @@ function seenNotification($pdo, $status, $notification_id)
     }
 }
 
-function checkApplication($pdo, $applicant_id)
+function getApplicationStatus($pdo, $applicant_id, $job_post_id)
 {
-    $sql = "SELECT * FROM applications WHERE applicant_id = ?";
+    $sql = "SELECT status FROM applications WHERE applicant_id = ? AND job_post_id = ?";
     $stmt = $pdo->prepare($sql);
-    $executeQuery = $stmt->execute([$applicant_id]);
+    $executeQuery = $stmt->execute([$applicant_id, $job_post_id]);
 
     if ($executeQuery) {
-        return $stmt->fetch();
+        return $stmt->fetchColumn(); // Fetch only the status column value
     }
 
+    return null; // Return null if the query fails
 }
 
 ?>
