@@ -208,11 +208,11 @@ if (isset($_POST['acceptButton']) || isset($_POST['rejectButton']) || isset($_PO
     if (isset($_POST['acceptButton'])) {
         $newStatus = 'Accepted';
         $jobPostDescription = $_POST['job_post_description']; // Assuming the title is also passed or fetched
-        $message = "Congratulations! Your application for <i>$jobPostDescription</i> posted by <b>$HR_id</b> has been accepted.";
+        $message = "Congratulations! Your application for $jobPostDescription posted by $HR_id has been accepted.";
     } elseif (isset($_POST['rejectButton'])) {
         $newStatus = 'Rejected';
         $jobPostDescription = $_POST['job_post_description'];
-        $message = "We're sorry. Your application for <i>$jobPostDescription</i> posted by <b>$HR_id</b> has been rejected.";
+        $message = "We're sorry. Your application for $jobPostDescription posted by $HR_id has been rejected.";
     } elseif (isset($_POST['undoButton'])) {
         $newStatus = 'Pending';
     }
