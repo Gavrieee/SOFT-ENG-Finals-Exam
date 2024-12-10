@@ -1,0 +1,410 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navDiv {
+
+    /* background-color: green; */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* padding: 30px; */
+    border: 2px solid black;
+
+    border-radius: 35px;
+
+}
+
+.navigationBar {
+    /* background-color: red; */
+
+    display: flex;
+    /* Make it a flex container */
+    justify-content: space-between;
+    /* Add space between items */
+    gap: 20px;
+    /* Optional: Adds uniform spacing between items */
+    padding: 10px;
+    margin: 10px;
+
+    border-radius: 25px;
+    border: 2px solid black;
+}
+
+.icons {
+    width: 20px;
+    height: auto;
+
+}
+
+.notificationOptions {
+    /* background-color: red; */
+
+    /* padding: 10px; */
+    margin-bottom: 10px;
+    /* border-radius: 15px; */
+    /* border-bottom: 1px solid black; */
+    padding: 5px 5px 5px 0px;
+
+    width: auto;
+    height: 30px;
+
+    text-align: left;
+    /* 
+    display: flex;
+    justify-content: center;
+    align-items: space-between; */
+
+    /* display: inline-block; */
+
+    border-radius: 10px;
+
+
+}
+
+.a-notificationOptions {
+    display: flex;
+    /* Makes the <a> behave like a block-level element */
+    padding: 5px 5px 5px 5px;
+
+    color: black;
+    /* Text color */
+    text-align: center;
+    /* Center text inside */
+    text-decoration: none;
+    /* Remove underline */
+    /* border: 10px rgb(244, 244, 244); */
+    /* border-radius: 50px; */
+    /* Rounded corners */
+    font-size: 16px;
+    /* Font size */
+    cursor: pointer;
+    /* Change cursor to pointer */
+}
+
+.notificationOptions:hover {
+    background-color: rgb(244, 244, 244);
+}
+
+.notificationOptions:active {
+    background-color: rgb(215, 215, 215);
+}
+
+.accountInfo {
+
+    /* background-color: orange; */
+
+    /* border-top: 1px solid black; */
+    border-bottom: 1px solid black;
+    margin: 20px 0px 20px 0px;
+
+}
+
+.FindHireLogo {
+    width: 200px;
+    margin: auto;
+
+    padding: 10px;
+
+    text-align: center;
+
+    /* border-bottom: 1px solid black; */
+}
+
+.parentContainer {
+    /* display: flex;
+    align-items: top;
+    justify-content: space-between;
+
+    background-color: aqua;
+
+    gap: 50px; */
+
+    display: flex;
+    justify-content: space-between;
+    /* Ensures profileSection stays on the left */
+    align-items: top;
+    width: 100%;
+
+    /* background-color: black; */
+
+}
+
+.circle-container {
+    width: 100px;
+    /* Set the container size */
+    height: 100px;
+    overflow: hidden;
+    /* Ensures the image doesn't spill outside the container */
+    border-radius: 50%;
+    /* Makes the container a circle */
+    display: flex;
+    /* Centers the image if it's smaller */
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+.small-circle-container {
+    /* max-width: 20%; */
+    width: 55px;
+    /* Ensures the image scales responsibly */
+    /* max-height: 20%; */
+    height: auto;
+    /* Prevents the image from exceeding container size */
+    overflow: hidden;
+    /* Ensures the image doesn't spill outside the container */
+    border-radius: 50%;
+    /* Makes the container a circle */
+
+    border: 2px solid black;
+}
+
+.circle-img {
+    width: 100%;
+    /* Ensures the image fits the container */
+    height: 100%;
+    /* Maintains the proportions inside */
+    object-fit: cover;
+    /* Ensures the image fills the circle without distortion */
+}
+
+.outerOuterContainer {
+    display: flex;
+    justify-content: center;
+    /* Centers the content horizontally */
+    width: 100%;
+
+    /* background-color: rgb(255, 88, 88); */
+}
+
+.outerContainer {
+    /* background-color: firebrick; */
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Centers the container horizontally */
+}
+
+.profileSection {
+    /* background-color: tomato;
+
+    width: 300px; */
+
+    /* margin: 0px 30px 0px 30px; */
+
+    /* background-color: rebeccapurple; */
+    background-color: white;
+    width: 20%;
+    display: flex;
+    flex-direction: left;
+    justify-content: space-evenly;
+    height: auto;
+
+
+    padding: 20px;
+    border-right: 1px solid black;
+}
+
+.indexSection {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 80%;
+
+    overflow: hidden;
+    /* Will fix the wrapping kineme */
+}
+
+.profileSection>* {
+    background-color: white;
+
+}
+
+.writePostSection {
+    /* background-color: hotpink; */
+    background-color: white;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    border: 2px solid black;
+    border-radius: 15px;
+
+}
+
+.writePostSection input[type='text'],
+input[type='submit'] {
+    width: 100%;
+}
+
+.input-text {
+    width: 200px;
+    /* Set the width of the input */
+    white-space: nowrap;
+    /* Prevent wrapping of text */
+    overflow-x: auto;
+    /* Enable horizontal scrolling when text overflows */
+    text-overflow: ellipsis;
+    /* Optionally show ellipsis for overflowed text */
+}
+
+.chooseFile {
+    display: none;
+}
+
+.chooseFileLabel {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    /* background-color: #007bff; */
+    /* padding: 10px 20px 10px 20px; */
+    /* border-radius: 5px; */
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.writePostButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* padding: 10px 20px; */
+
+    background-image: url('website_images/sendButtonSVG.svg');
+    background-size: cover;
+    object-fit: cover;
+    border: none;
+    background-color: transparent;
+
+    width: 10px;
+    /* Adjust the width of the button */
+    height: 10px;
+    /* Adjust the height of the button */
+    font-size: 16px;
+    /* Adjust the font size inside the button */
+    padding: 17px;
+    /* Optional: Add padding for more space inside */
+
+
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.jobPosts {
+    max-width: auto;
+    max-height: auto;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.jobPosts img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.image-container {
+
+    position: relative;
+    /* Create a positioning context for the link */
+}
+
+.image-container img {
+    display: block;
+    /* Prevent any gaps around the image */
+    width: 100%;
+    /* Ensure the image is responsive */
+    height: auto;
+}
+
+.image-container a {
+    position: absolute;
+    /* Position the link relative to the container */
+    top: 10px;
+    /* Adjust the vertical position */
+    right: 10px;
+    /* Adjust the horizontal position */
+    text-decoration: none;
+    /* Remove underline */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    color: white;
+    /* Text color */
+    padding: 5px 10px;
+    /* Padding around the link */
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.image-container a:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Darker background on hover */
+}
+
+.link-container {
+    display: inline-block;
+    gap: 10px;
+}
+
+.jobPostDescriptionParent {
+    background-color: none;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px;
+
+
+}
+
+.jobPostNameDate {
+    /* background-color: pink; */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 30px;
+
+
+}
+
+.jobPostNameDate a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.jobPostBelowButtons {
+    background-color: black;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: space;
+
+}
+
+.a-jobPostBelowButtons {
+    display: flex;
+    /* padding: 0px 265px 0px 265px; */
+}
+
+.jobPostBelowButtons a {
+    text-decoration: none;
+    color: white;
+}
+
+.normalContainer {
+    width: 700px;
+}
